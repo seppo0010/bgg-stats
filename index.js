@@ -73,23 +73,28 @@ var games_designer = {};
 var games_designer_count = {};
 var games_mechanic = {};
 var games_mechanic_count = {};
+var user_collection = {};
 var uc = 0;
 var gc = 0;
 users.forEach(function(user) {
   uc++;
   get_collection(user, function(things) {
+    user_collection[user] = {own: 0, sum_votes: 0, num_votes: 0};
     things.forEach(function(item) {
       if (item.objecttype == 'thing') {
         var r = parseInt(item.stats.rating.value);
         if (item.status.own) {
           if (!games_owned[item.objectid]) games_owned[item.objectid] = 0;
           games_owned[item.objectid]++;
+          user_collection[user].own++;
         }
         if (!games_rating[item.objectid]) {
           games_rating[item.objectid] = 0;
           games_rating_count[item.objectid] = 0;
         }
         if (r > 0) {
+          user_collection[user].sum_votes += r;
+          user_collection[user].num_votes++;
           games_rating[item.objectid] += r;
           games_rating_count[item.objectid]++;
           gc++;
@@ -145,6 +150,18 @@ users.forEach(function(user) {
       }
     });
     if (uc-- == 1) {
+      for (user in user_collection) {
+        console.log(
+            [
+            'user',
+            user,
+            user_collection[user].own,
+            user_collection[user].num_votes,
+            user_collection[user].num_votes == 0 ? '-' : (
+              user_collection[user].sum_votes / user_collection[user].num_votes)
+            ].join('\t')
+            );
+      }
       for (game_id in games_owned) {
         get_game(game_id, function(game) {
           console.log(
