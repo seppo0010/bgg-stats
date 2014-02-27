@@ -68,8 +68,11 @@ var games_owned = {};
 var games_rating = {};
 var games_rating_count = {};
 var games_per_designer = {};
+var games_per_designer = {};
 var games_designer = {};
 var games_designer_count = {};
+var games_mechanic = {};
+var games_mechanic_count = {};
 var uc = 0;
 var gc = 0;
 users.forEach(function(user) {
@@ -104,7 +107,26 @@ users.forEach(function(user) {
               if (games_per_designer[d].indexOf(game.name) == -1)
                 games_per_designer[d].push(game.name);
             });
+            (game.types.boardgamemechanic || []).forEach(function(d) {
+              if (!games_mechanic[d]) {
+                games_mechanic[d] = 0;
+                games_mechanic_count[d] = 0;
+              }
+              games_mechanic[d] += r;
+              games_mechanic_count[d]++;
+            });
             if (gc-- == 1) {
+              for (mechanic in games_mechanic_count) {
+                if (games_mechanic_count[mechanic] > 2)
+                  console.log(
+                    [
+                    'mechanic',
+                    mechanic,
+                    games_mechanic_count[mechanic],
+                    games_mechanic[mechanic] / games_mechanic_count[mechanic]
+                    ].join('\t')
+                    );
+              }
               for (designer in games_designer_count) {
                 if (games_designer_count[designer] > 2)
                   console.log(
