@@ -129,6 +129,8 @@ var games_designer = {};
 var games_designer_count = {};
 var games_mechanic = {};
 var games_mechanic_count = {};
+var games_publisher = {};
+var games_publisher_count = {};
 var user_collection = {};
 var uc = 0;
 var gc = 0;
@@ -176,6 +178,14 @@ users.forEach(function(user) {
               games_mechanic[d] += r;
               games_mechanic_count[d]++;
             });
+            (game.types.boardgamepublisher || []).forEach(function(d) {
+              if (!games_publisher[d]) {
+                games_publisher[d] = 0;
+                games_publisher_count[d] = 0;
+              }
+              games_publisher[d] += r;
+              games_publisher_count[d]++;
+            });
             if (gc-- == 1) {
               for (mechanic in games_mechanic_count) {
                 if (games_mechanic_count[mechanic] > 2)
@@ -185,6 +195,18 @@ users.forEach(function(user) {
                     mechanic,
                     games_mechanic_count[mechanic],
                     games_mechanic[mechanic] / games_mechanic_count[mechanic]
+                    ].join('\t')
+                    );
+              }
+              for (publisher in games_publisher_count) {
+                if (games_publisher_count[publisher] > 2)
+                  console.log(
+                    [
+                    'publisher',
+                    publisher,
+                    games_publisher_count[publisher],
+                    (games_publisher[publisher] /
+                     games_publisher_count[publisher])
                     ].join('\t')
                     );
               }
