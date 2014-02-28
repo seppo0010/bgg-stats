@@ -9,6 +9,62 @@ var users = ['seppo0010', 'flomincucci', 'saaruman', 'MilenioOscuro', 'GnzLh',
     'SebasKO', 'SebasKO', 'Charlodes', 'toote', 'xapi', 'ToshiroBudini',
     'frater82', 'agonar', 'Kassapa', 'Nordico', 'Earnur', 'Monk74'];
 
+
+var maxFilesInFlight = 100;
+var origRead = fs.readFile;
+var origWrite = fs.writeFile;
+
+var activeCount = 0;
+var pending = [];
+
+var wrapCallback = function(cb) {
+    return function() {
+        activeCount--;
+        cb.apply(this, Array.prototype.slice.call(arguments));
+        if (activeCount < maxFilesInFlight && pending.length) {
+            pending.shift()();
+        }
+    };
+};
+
+/**
+ */
+fs.readFile = function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (activeCount < maxFilesInFlight) {
+        if (args[1] instanceof Function) {
+            args[1] = wrapCallback(args[1]);
+        } else if (args[2] instanceof Function) {
+            args[2] = wrapCallback(args[2]);
+        }
+        activeCount++;
+        origRead.apply(fs, args);
+    } else {
+        pending.push(function() {
+            fs.readFile.apply(fs, args);
+        });
+    }
+};
+
+/**
+ */
+fs.writeFile = function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (activeCount < maxFilesInFlight) {
+        if (args[1] instanceof Function) {
+            args[1] = wrapCallback(args[1]);
+        } else if (args[2] instanceof Function) {
+            args[2] = wrapCallback(args[2]);
+        }
+        activeCount++;
+        origWrite.apply(fs, args);
+    } else {
+        pending.push(function() {
+            fs.writeFile.apply(fs, args);
+        });
+    }
+};
+
 var get_game = function(thing_id, callback) {
   var path = 'data/thing-' + thing_id;
   fs.exists(path, function(exists) {
