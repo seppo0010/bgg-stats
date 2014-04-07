@@ -1,45 +1,89 @@
 mechanic	Nombre	Votos	Promedio
-mechanic	Acting	4	6.75
-mechanic	Action / Movement Programming	10	7.3
-mechanic	Action Point Allowance System	57	7.12280701754386
-mechanic	Area Control / Area Influence	131	6.961832061068702
-mechanic	Area Enclosure	16	7.9375
-mechanic	Area Movement	59	7.169491525423729
-mechanic	Area-Impulse	9	5.666666666666667
-mechanic	Auction/Bidding	66	6.53030303030303
-mechanic	Betting/Wagering	12	6.416666666666667
-mechanic	Campaign / Battle Card Driven	19	8.210526315789474
-mechanic	Card Drafting	162	7.209876543209877
-mechanic	Co-operative Play	74	6.783783783783784
+mechanic	Acting	4	5.75
+mechanic	Acting	5	6.2
+mechanic	Action / Movement Programming	8	7.25
+mechanic	Action / Movement Programming	9	7.333333333333333
+mechanic	Action Point Allowance System	49	7.081632653061225
+mechanic	Action Point Allowance System	56	7.178571428571429
+mechanic	Area Control / Area Influence	116	6.913793103448276
+mechanic	Area Control / Area Influence	133	7.015037593984962
+mechanic	Area Enclosure	16	7.875
+mechanic	Area Enclosure	16	7.875
+mechanic	Area Movement	42	7
+mechanic	Area Movement	54	7.111111111111111
+mechanic	Area-Impulse	10	5.7
+mechanic	Area-Impulse	10	5.7
+mechanic	Auction/Bidding	63	6.492063492063492
+mechanic	Auction/Bidding	66	6.5606060606060606
+mechanic	Betting/Wagering	11	6.363636363636363
+mechanic	Betting/Wagering	9	6.111111111111111
+mechanic	Campaign / Battle Card Driven	13	7.923076923076923
+mechanic	Campaign / Battle Card Driven	18	8.166666666666666
+mechanic	Card Drafting	129	7.186046511627907
+mechanic	Card Drafting	159	7.232704402515723
+mechanic	Co-operative Play	66	6.7272727272727275
+mechanic	Co-operative Play	77	6.792207792207792
+mechanic	Commodity Speculation	8	6.75
 mechanic	Commodity Speculation	9	6.888888888888889
-mechanic	Deck / Pool Building	47	7.127659574468085
-mechanic	Dice Rolling	208	6.9423076923076925
-mechanic	Grid Movement	58	6.775862068965517
-mechanic	Hand Management	318	6.827044025157233
-mechanic	Memory	20	7.35
+mechanic	Deck / Pool Building	37	7.108108108108108
+mechanic	Deck / Pool Building	49	7.142857142857143
+mechanic	Dice Rolling	191	6.895287958115183
+mechanic	Dice Rolling	218	6.931192660550459
+mechanic	Grid Movement	50	6.42
+mechanic	Grid Movement	60	6.65
+mechanic	Hand Management	287	6.818815331010453
+mechanic	Hand Management	327	6.853211009174312
+mechanic	Hex-and-Counter	3	7.666666666666667
+mechanic	Memory	19	7.368421052631579
+mechanic	Memory	23	7.391304347826087
 mechanic	Modular Board	103	6.922330097087379
+mechanic	Modular Board	88	6.875
 mechanic	Paper-and-Pencil	4	6
-mechanic	Partnerships	63	6.650793650793651
-mechanic	Pattern Building	19	7.684210526315789
-mechanic	Pattern Recognition	13	8.307692307692308
-mechanic	Pick-up and Deliver	12	6.5
-mechanic	Player Elimination	41	6.634146341463414
+mechanic	Partnerships	55	6.581818181818182
+mechanic	Partnerships	67	6.701492537313433
+mechanic	Pattern Building	11	6.909090909090909
+mechanic	Pattern Building	13	7
+mechanic	Pattern Recognition	6	6.333333333333333
+mechanic	Pattern Recognition	7	6.428571428571429
+mechanic	Pick-up and Deliver	10	6.5
+mechanic	Pick-up and Deliver	11	6.636363636363637
+mechanic	Player Elimination	38	6.605263157894737
+mechanic	Player Elimination	45	6.688888888888889
+mechanic	Point to Point Movement	25	7.32
 mechanic	Point to Point Movement	29	7.344827586206897
-mechanic	Press Your Luck	26	6.6923076923076925
-mechanic	Role Playing	33	7.121212121212121
-mechanic	Roll / Spin and Move	23	5.173913043478261
-mechanic	Route/Network Building	60	6.916666666666667
-mechanic	Secret Unit Deployment	13	7.384615384615385
-mechanic	Set Collection	182	6.84065934065934
-mechanic	Simulation	6	5.666666666666667
-mechanic	Simultaneous Action Selection	76	7.065789473684211
+mechanic	Press Your Luck	17	6.588235294117647
+mechanic	Press Your Luck	25	6.68
+mechanic	Role Playing	31	7.032258064516129
+mechanic	Role Playing	35	7.085714285714285
+mechanic	Roll / Spin and Move	19	5.2631578947368425
+mechanic	Roll / Spin and Move	22	5.181818181818182
+mechanic	Route/Network Building	57	6.964912280701754
+mechanic	Route/Network Building	62	6.935483870967742
+mechanic	Secret Unit Deployment	11	7.7272727272727275
+mechanic	Secret Unit Deployment	13	7.461538461538462
+mechanic	Set Collection	172	6.8023255813953485
+mechanic	Set Collection	188	6.867021276595745
+mechanic	Simulation	4	5.5
+mechanic	Simulation	7	5.857142857142857
+mechanic	Simultaneous Action Selection	60	6.85
+mechanic	Simultaneous Action Selection	77	7.064935064935065
 mechanic	Stock Holding	10	5.9
-mechanic	Storytelling	30	7.366666666666666
-mechanic	Tile Placement	96	7.09375
-mechanic	Time Track	11	7.636363636363637
-mechanic	Trading	36	6.5
-mechanic	Trick-taking	7	5.857142857142857
-mechanic	Variable Phase Order	33	7.2727272727272725
-mechanic	Variable Player Powers	203	7.054187192118227
-mechanic	Voting	40	7.55
+mechanic	Stock Holding	10	5.9
+mechanic	Storytelling	25	7
+mechanic	Storytelling	32	7.34375
+mechanic	Tile Placement	102	7.1568627450980395
+mechanic	Tile Placement	91	7.153846153846154
+mechanic	Time Track	10	7.5
+mechanic	Time Track	7	7.857142857142857
+mechanic	Trading	41	6.536585365853658
+mechanic	Trading	44	6.568181818181818
+mechanic	Trick-taking	6	6
+mechanic	Trick-taking	6	6
+mechanic	Variable Phase Order	33	7.242424242424242
+mechanic	Variable Phase Order	34	7.323529411764706
+mechanic	Variable Player Powers	186	7.010752688172043
+mechanic	Variable Player Powers	219	7.059360730593608
+mechanic	Voting	31	7.419354838709677
+mechanic	Voting	40	7.625
+mechanic	Worker Placement	79	7.594936708860759
 mechanic	Worker Placement	86	7.6395348837209305
