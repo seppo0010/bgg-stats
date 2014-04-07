@@ -7,7 +7,8 @@ try {
 
 var users = ['seppo0010', 'flomincucci', 'saaruman', 'MilenioOscuro', 'GnzLh',
     'SebasKO', 'SebasKO', 'Charlodes', 'toote', 'xapi', 'ToshiroBudini',
-    'frater82', 'agonar', 'Kassapa', 'Nordico', 'Earnur', 'Monk74', 'barbazul'];
+    'frater82', 'agonar', 'Kassapa', 'Nordico', 'Earnur', 'Monk74', 'barbazul',
+    'yukata'];
 
 
 var maxFilesInFlight = 100;
